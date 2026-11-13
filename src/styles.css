@@ -69,7 +69,6 @@ body {
 .main-field {
     display: flex;
     align-items: center;
-    margin-top: 6px;
     gap: 10px;
     border: 1px solid #1111111A;
     background: #FAFAFA;
@@ -78,6 +77,7 @@ body {
     position: relative;
     box-sizing: border-box;
     height: 50px;
+    width: 100%;
 }
 
 .main-field.textarea {
@@ -134,4 +134,23 @@ input::placeholder, textarea::placeholder {
     border-color: rgba(0, 0, 0, 0.20);
     box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.35);
     background: rgba(255, 255, 255, 0.75);
+}
+
+.main-field:has(.ng-invalid.ng-touched) {
+    border-color: red;
+}
+
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-error {
+    display: block;
+    font-size: 12px;
+    color: red;
+    margin-top: 4px;
+    margin-left: 2px;
+    min-height: 16px;
 }
